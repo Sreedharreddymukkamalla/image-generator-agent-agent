@@ -20,9 +20,7 @@ def _upload_to_gcs(image_bytes: bytes, filename: str) -> str:
     bucket = client.bucket(GCS_BUCKET)
     blob = bucket.blob(f"anime-images/{filename}")
     blob.upload_from_string(image_bytes, content_type="image/png")
-    blob.make_public()
-    return blob.public_url
-
+    return f"https://storage.googleapis.com/{GCS_BUCKET}/anime-images/{filename}"
 
 async def generate_anime_image(prompt: str, aspect_ratio: str = "1:1") -> dict:
     """
