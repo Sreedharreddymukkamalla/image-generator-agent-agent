@@ -33,7 +33,7 @@ app: FastAPI = get_fast_api_app(
 
 AGENT_URL = os.getenv(
     "AGENT_PUBLIC_URL",
-    "https://image-generator-agent-475756125529.us-central1.run.app/anime",
+    "https://image-generator-agent-475756125529.us-central1.run.app/anime/",
 )
 
 agent_card = AgentCard(
