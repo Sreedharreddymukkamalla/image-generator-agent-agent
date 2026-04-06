@@ -4,12 +4,10 @@ from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPConnecti
 
 root_agent = Agent(
     model='gemini-2.5-flash',
-    name='root_agent',
-    description='An expert otaku assistant for discovering anime.',
+    name='image_generator_agent',
+    description='Google image generator',
     instruction="""
-        You are an Anime Show Finder. Help users find anime based on 
-        genre, mood, or similar shows they enjoy. 
-        Always provide the Title, a brief synopsis, and where to watch.
+        Generate a image based on User input
     """,
     tools=[
         McpToolset(
