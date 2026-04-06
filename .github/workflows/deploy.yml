@@ -33,3 +33,4 @@ jobs:
             GOOGLE_CLOUD_PROJECT=project-1af0f617-fd7b-4ca6-b43
             GOOGLE_CLOUD_LOCATION=us-central1
             GOOGLE_GENAI_USE_VERTEXAI=true
+            GCS_BUCKET_NAME=project-1af0f617-fd7b-4ca6-b43-imagescoring-bucket

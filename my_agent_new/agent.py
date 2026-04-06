@@ -12,7 +12,7 @@ vertexai.init(
     location=os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1"),
 )
 
-GCS_BUCKET = os.environ["GCS_BUCKET_NAME","project-1af0f617-fd7b-4ca6-b43-imagescoring-bucket"]  # add this env var to Cloud Run
+GCS_BUCKET = os.getenv("GCS_BUCKET_NAME", "project-1af0f617-fd7b-4ca6-b43-imagescoring-bucket")  # add this env var to Cloud Run
 
 def _upload_to_gcs(image_bytes: bytes, filename: str) -> str:
     """Upload image bytes to GCS and return a public URL."""
